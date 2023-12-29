@@ -5,7 +5,7 @@ import Card from '../components/Card.astro';
 
 <Layout
 	title="Astro Portfolio"
-	seoTitle="Imran Khan, Software Engineer Portfolio"
+	seoTitle="Imran Khan - Software Engineer"
 	seoDesc="Software Engineer expertise in Front-End Development">
 	<main>
 		<svg
@@ -39,6 +39,10 @@ import Card from '../components/Card.astro';
 		<!-- Slot -->
 		<div class="w-8/12 md:w-6/12 mx-auto">
 			<h1 class="text-5xl md:text-6xl text-center">Imran <span class="text-gradient">Khan</span></h1>
+			<div id="typed-strings">
+				<p class="text-center">Software Engineer specalised in <strong class="text-gradient">Front-End</strong> development</p>
+			</div>
+			<div class="text-center mt-6"><span id="typed"></span></div>
 		</div>
 
 		<!--<p class="instructions">-->
@@ -69,6 +73,17 @@ import Card from '../components/Card.astro';
 		<!--</ul>-->
 	</main>
 </Layout>
+
+<!-- Typed js animation on text -->
+<script>
+	import Typed from "typed.js";
+
+	let typed = new Typed('#typed', {
+		stringsElement: '#typed-strings',
+		typeSpeed: 50,
+		loop: true,
+	});
+</script>
 
 <style>
 	.astro-a {

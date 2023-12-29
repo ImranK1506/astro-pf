@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Projects"
+        seoTitle="Front-End Project"
+        seoDesc="Projects made with Vuejs, NextJs, and AstroJs"
+>
+    <div class="2-8/12 lg:w-4/12 mx-auto">
+        <h1 class="text-5xl my-2">Projects</h1>
+        <div>
+			<p class="instructions">
+				To get started, open the directory <code>src/pages</code> in your project.<br />
+				<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			</p>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="/projects/documentation"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+				/>
+				<Card
+					href="/projects/integrations"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+				/>
+				<Card
+					href="/projects/themes"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+				/>
+				<Card
+					href="/projects/chat"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+				/>
+			</ul>
+        </div>
+    </div>
+</Layout>
+
+<style>
+	.instructions {
+		margin: 2rem 0;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { projects: "documentation" },
+      props: {
+        name: "Documentation",
+        desc: "description",
+      },
+    },
+    { params: { projects: "integrations" },
+      props: {
+        name: "Integrations",
+        desc: "description",
+      },
+    },
+    { params: { projects: "themes" },
+      props: {
+        name: "Themes",
+        desc: "description",
+      },
+    },
+    { params: { projects: "chat" },
+      props: {
+        name: "Chat",
+        desc: "description",
+      },
+    },
+  ]
+}
+
+const { projects } = Astro.params;
+const { name, desc } = Astro.props;
+---
+
+<Layout>
+    <section class="mx-auto w-3/6">
+      <h1 class="font-bold">Project {name}</h1>
+      <p>{desc}</p>
+    </section>
+</Layout>

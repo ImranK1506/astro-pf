@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from "../components/Header.astro"
+
 ---
 
 <Layout
@@ -37,13 +39,39 @@ import Card from '../components/Card.astro';
 		<!--	</defs>-->
 		<!--</svg>-->
 		<!-- Slot -->
-		<div class="w-8/12 md:w-6/12 mx-auto">
-			<h1 class="text-5xl md:text-6xl text-center">IMRAN<span class="text-gradient">KHAN</span></h1>
-			<div id="typed-strings">
-				<p class="text-center tracking-widest">I AM A SOFTWARE ENGINEER</p>
-			</div>
-			<div class="text-center mt-6"><span id="typed"></span></div>
-		</div>
+		<Header />
+
+	<!-- Cards -->
+	<!--	<div class="2-8/12 lg:w-4/12 mx-auto">-->
+	<!--		<h1 class="text-5xl my-2">Projects</h1>-->
+	<!--		<div>-->
+	<!--			<p class="instructions">-->
+	<!--				A selection of my projects-->
+	<!--			</p>-->
+	<!--			<ul role="list" class="link-card-grid">-->
+	<!--				<Card-->
+	<!--					href="/projects/documentation"-->
+	<!--					title="Documentation"-->
+	<!--					body="Learn how Astro works and explore the official API docs."-->
+	<!--				/>-->
+	<!--				<Card-->
+	<!--					href="/projects/integrations"-->
+	<!--					title="Integrations"-->
+	<!--					body="Supercharge your project with new frameworks and libraries."-->
+	<!--				/>-->
+	<!--				<Card-->
+	<!--					href="/projects/themes"-->
+	<!--					title="Themes"-->
+	<!--					body="Explore a galaxy of community-built starter themes."-->
+	<!--				/>-->
+	<!--				<Card-->
+	<!--					href="/projects/chat"-->
+	<!--					title="Community"-->
+	<!--					body="Come say hi to our amazing Discord community. ❤️"-->
+	<!--				/>-->
+	<!--			</ul>-->
+	<!--		</div>-->
+	<!--	</div>-->
 	</main>
 </Layout>
 
@@ -67,13 +95,6 @@ import Card from '../components/Card.astro';
 		width: 220px;
 		height: auto;
 		z-index: -1;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 	.instructions {
 		margin-bottom: 2rem;

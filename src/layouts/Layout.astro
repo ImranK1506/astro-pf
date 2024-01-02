@@ -22,7 +22,7 @@ const { title, seoTitle, seoDesc } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<Head title={title} seoTitle={seoTitle} seoDesc={seoDesc} />
 	</head>
-	<body class="text-white grid gap-0">
+	<body class="text-white grid gap-0 h-14 bg-gradient-to-b from-black to-blue-700">
 		<Nav />
 		<slot />
 		<Footer />
@@ -41,9 +41,7 @@ const { title, seoTitle, seoDesc } = Astro.props;
 			white 60%
 		);
 	}
-	html {
-		background: #13151a;
-	}
+
 	body {
 		font-family: "Roboto Slab", sans-serif;
 		min-height: 100vh;
